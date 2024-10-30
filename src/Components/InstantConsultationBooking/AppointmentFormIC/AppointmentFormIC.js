@@ -12,6 +12,7 @@ const AppointmentFormIC = ({ doctorName, doctorSpeciality, onSubmit }) => {
     const handleFormSubmit = (e) => {
       e.preventDefault();
       onSubmit({ name, phoneNumber });
+      localStorage.setItem('doctorData', { name, phoneNumber });
       setName('');
       setPhoneNumber('');
     };
